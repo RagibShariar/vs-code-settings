@@ -1,40 +1,34 @@
+/************
+ *  editor == => *
+ ************/
+// == === != <= >=  </div> <img/> --- www && ++
+//  == === != <= >=  </div> <img/> --- www && ++
 {
-  /*----------  
-      editor 
-  ------------*/
-  "window.zoomLevel": 0,
-  "editor.fontSize": 19,
-  "editor.fontFamily": "Operator Mono, Fira Code",
-  "editor.fontWeight": "325",
-  "editor.fontVariations": true,
-  // "editor.fontFamily": "Consolas, 'Courier New', monospace",
+  "editor.fontSize": 20,
+  "editor.lineHeight": 1.5,
+  // "editor.letterSpacing": -1.7,
+  "editor.letterSpacing": 0.2,
+  // "editor.fontFamily": "Operator Mono, Cascadia Code,Fira Code, Consolas",
+  // "editor.fontFamily": "Operator Mono SSm Nerd Lig",
+  // "editor.fontFamily": "Operator Mono SSM Lig",
+  "editor.fontFamily": "Operator Mono Lig",
+  "editor.fontWeight": "300",
+  // "editor.fontVariations": true,
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": true,
   "editor.inlineSuggest.showToolbar": "always",
-  "editor.tokenColorCustomizations": {
-    "textMateRules": [
-      {
-        "scope": "comment",
-        "settings": {
-          "fontStyle": "italic"
-        }
-      }
-    ]
-  },
-  // "workbench.colorTheme": "Community Material Theme Darker High Contrast",
-  "workbench.iconTheme": "material-icon-theme",
 
-  /*-------- 
-    cursor 
-  ----------*/
+  /************
+   *  cursor  *
+   ************/
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.cursorBlinking": "expand",
-  "editor.cursorWidth": 2,
+  "editor.cursorWidth": 3,
 
-  /*------------------------------------  
-    config related to code formatting 
-  --------------------------------------*/
+  /***************************************
+   *  config related to code formatting  *
+   ***************************************/
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "editor.formatOnType": true,
@@ -60,43 +54,142 @@
   },
   "eslint.alwaysShowStatus": true,
 
-  /*----------  
-    terminal 
-  ------------*/
+  /****************
+   *   terminal   *
+   ****************/
   "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontWeight": "normal",
-  "terminal.integrated.fontFamily": "Operator Mono",
-  // "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace"
+  "terminal.integrated.fontWeight": 325,
+  "terminal.integrated.fontFamily": "Operator Mono, FiraCode Nerd Font",
+  // "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
   "terminal.integrated.cursorBlinking": true,
 
-  /*------------------------  
-    terminal customization 
-  --------------------------*/
+  /****************************
+   *  editor customization  *
+   ****************************/
   "workbench.colorCustomizations": {
-    "terminal.background": "#1D2021",
-    "terminal.foreground": "#A89984",
-    "terminalCursor.background": "#1D2021",
-    "terminalCursor.foreground": "#A89984",
-    "terminal.ansiBlack": "#1D2021",
-    "terminal.ansiBlue": "#0D6678",
-    "terminal.ansiBrightBlack": "#665C54",
-    "terminal.ansiBrightBlue": "#0D6678",
-    "terminal.ansiBrightCyan": "#8BA59B",
-    "terminal.ansiBrightGreen": "#95C085",
-    "terminal.ansiBrightMagenta": "#8F4673",
-    "terminal.ansiBrightRed": "#FB543F",
-    "terminal.ansiBrightWhite": "#FDF4C1",
-    "terminal.ansiBrightYellow": "#FAC03B",
-    "terminal.ansiCyan": "#8BA59B",
-    "terminal.ansiGreen": "#95C085",
-    "terminal.ansiMagenta": "#8F4673",
-    "terminal.ansiRed": "#FB543F",
-    "terminal.ansiWhite": "#A89984",
-    "terminal.ansiYellow": "#FAC03B"
+    "[Gruvbox Dark Hard]": {
+      "editor.wordHighlightBorder": "#17E5E699",
+      "editor.wordHighlightBackground": "#17E5E630",
+      "editor.wordHighlightStrongBorder": "#bbe67e99",
+      "editor.wordHighlightStrongBackground": "#bbe67e30",
+      "editorBracketMatch.border": "#17E5E699",
+      "editorCursor.foreground": "#d4922f",
+      "editorLineNumber.activeForeground": "#fabd2f",
+      // "editorBracketMatch.background": "#bbe67e99",
+      //   "editor.hoverHighlightBackground": "#3392ff2a",
+      //   "editor.selectionBackground": "#3392FF44",
+      "sideBar.border": "#3c383680",
+      "activityBar.border": "#3c383680",
+      "editorGroupHeader.tabsBorder": "#3c383680"
+      // "activityBar.border": "#1d2021",
+      //! -----------------------
+      // "editorBracketHighlight.foreground1": "#ebdbb2",
+      // "editorBracketHighlight.foreground2": "#689d6a",
+      // "editorBracketHighlight.foreground3": "#458588",
+      // "editorBracketHighlight.foreground4": "#b16286",
+      // "editorBracketHighlight.foreground5": "#fe8019",
+      // "editorBracketHighlight.foreground6": "#fabd2f",
+      // ! ------------------------
+    },
+    "[Learn with Sumit - Shades of Grey]": {
+      "editor.wordHighlightBackground": "#17E5E630",
+      "editor.wordHighlightStrongBorder": "#bbe67e99",
+      "editor.wordHighlightStrongBackground": "#bbe67e30",
+      "editor.background": "#1f2428",
+      "activityBar.background": "#1f2428",
+      "titleBar.activeBackground": "#1f2428",
+      // "sideBar.border": "#5f616750",
+      "activityBar.border": "#1f2428",
+      "panel.border": "#5f616750",
+      "editorCursor.foreground": "#00E8C6"
+    },
+    "[Learn with Sumit - Party]": {
+      // "editor.wordHighlightBackground": "#17E5E630",
+      "editor.wordHighlightBorder": "#30dcdc",
+      "editor.wordHighlightStrongBorder": "#d47d13",
+      "editorLineNumber.activeForeground": "#30dcdc"
+    }
   },
 
-  // Extensions Settings
+  "editor.tokenColorCustomizations": {
+    // "comments": "#d4922f",
+    "textMateRules": [
+      {
+        "scope": [
+          // all comment types
+          "comment",
+
+          // true, false, null
+          "constant.language",
+
+          // import, from, export, default, return, if, for, break, continue, try, catch, finally,
+          // throw, default, yield, await
+          "keyword.control",
+
+          // in, void, delete, instanceof
+          "keyword.operator.expression",
+
+          // debugger
+          "keyword.other",
+
+          // new
+          "keyword.operator.new",
+
+          // super, this, arguments
+          "variable.language",
+
+          // attributes in html, jsx, etc.
+          "entity.other.attribute-name",
+
+          // static, extends, async, private, public, implements
+          // constructor, const, let, var, enum, class, function, interface
+          // no explicit scopes for constructor, const, let, var
+          // also no explicit scope for function without the arrow
+          // therefore we enable all storage and explictly exclude the arrow in another scope
+          "storage"
+
+          //  no explicit scope for the eval keyword yet
+          //  can be targeted with the scope below, but scope is too broad
+          // "support.function",
+
+          //  no explicit scope for the package keyword yet
+          //  can be targeted with the scope below, but scope is too broad
+          // "variable.other.readwrite",
+        ],
+        "settings": {
+          "fontStyle": "italic"
+        }
+      },
+      {
+        "scope": [
+          // function keyword does not have an explicit scope without the arrow
+          // therefore we explictly exclude the function arrow from being italicized
+          "storage.type.function.arrow",
+          "text.html entity.name.tag",
+          "text.html punctuation.tag"
+        ],
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  },
   "tabnine.experimentalAutoImports": true,
+  "markdown-preview-enhanced.automaticallyShowPreviewOfMarkdownBeingEdited": true,
+  "powermode.enabled": true,
+  "files.autoSave": "afterDelay",
+  "editor.guides.bracketPairs": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "liveServer.settings.donotShowInfoMsg": true,
+  "tailwindCSS.includeLanguages": {
+    "html": "HTML",
+    "javascript": "javascript",
+    "css": "css"
+  },
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "workbench.colorTheme": "Learn with Sumit - Shades of Grey"
 }
