@@ -1,22 +1,25 @@
 /************
- *  editor == => *
+ *  editor  *
  ************/
-// == === != <= >=  </div> <img/> --- www && ++
-//  == === != <= >=  </div> <img/> --- www && ++
+// == === != <= >= </> & @ </div> --- www && ++ ----- <> [] % $
 {
-  "editor.fontSize": 20,
-  "editor.lineHeight": 1.5,
-  // "editor.letterSpacing": -1.7,
-  "editor.letterSpacing": 0.2,
+  "editor.fontSize": 21,
   // "editor.fontFamily": "Operator Mono, Cascadia Code,Fira Code, Consolas",
   // "editor.fontFamily": "Operator Mono SSm Nerd Lig",
   // "editor.fontFamily": "Operator Mono SSM Lig",
-  "editor.fontFamily": "Operator Mono Lig",
-  "editor.fontWeight": "300",
-  // "editor.fontVariations": true,
+  // "editor.fontFamily": "Operator Mono Lig",
+  // "editor.fontFamily": "Fira Code",
+  // "editor.fontFamily": "Cascadia Code",
+  "editor.fontFamily": "JetBrains Mono",
+  // "editor.letterSpacing": -0.7,
+  "editor.lineHeight": 32,
+  "editor.fontWeight": "500",
+  // "editor.fontLigatures": "'calt','ss01','ss02','ss03','ss04','ss05','ss06','zero', 'onum'",
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.minimap.enabled": true,
+  "editor.minimap.autohide": true,
+  "editor.minimap.renderCharacters": false,
   "editor.inlineSuggest.showToolbar": "always",
 
   /************
@@ -39,6 +42,8 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "typescript.validate.enable": true,
+  "typescript.tsserver.experimental.enableProjectDiagnostics": true,
   "[javascript]": {
     // "editor.defaultFormatter": null,
     // "editor.formatOnSave": false,
@@ -48,27 +53,43 @@
     // "editor.defaultFormatter": null
   },
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.tslint": true,
-    "source.organizeImports": true
+    "source.fixAll.eslint": "explicit",
+    "source.fixAll.tslint": "explicit",
+    "source.organizeImports": "explicit"
   },
   "eslint.alwaysShowStatus": true,
 
   /****************
    *   terminal   *
    ****************/
-  "terminal.integrated.fontSize": 16,
-  "terminal.integrated.fontWeight": 325,
-  "terminal.integrated.fontFamily": "Operator Mono, FiraCode Nerd Font",
-  // "terminal.integrated.fontFamily": "Consolas, 'Courier New', monospace",
+  "terminal.integrated.fontSize": 19,
   "terminal.integrated.cursorStyle": "line",
   "terminal.integrated.cursorWidth": 2,
   "terminal.integrated.cursorBlinking": true,
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
 
   /****************************
    *  editor customization  *
    ****************************/
   "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#ffe9ce",
+    "editorBracketHighlight.foreground2": "#49e9a6",
+    "editorBracketHighlight.foreground3": "#49d6e9",
+    "editorBracketHighlight.foreground4": "#df769b",
+    "editorBracketHighlight.foreground5": "#ffba31",
+    //
+
+    "[Noctis Azureus]": {
+      "editor.background": "#080808",
+      "editorGutter.background": "#010107",
+      "tab.activeBackground": "#010107",
+      "terminal.background": "#010107",
+      // "sideBar.background": "#010107",
+      "tab.activeBorder": "#DCDCDC",
+      "tab.activeBorderTop": "#DCDCDC",
+      "editorLineNumber.activeForeground": "#DCDCDC"
+    },
+
     "[Gruvbox Dark Hard]": {
       "editor.wordHighlightBorder": "#17E5E699",
       "editor.wordHighlightBackground": "#17E5E630",
@@ -77,21 +98,9 @@
       "editorBracketMatch.border": "#17E5E699",
       "editorCursor.foreground": "#d4922f",
       "editorLineNumber.activeForeground": "#fabd2f",
-      // "editorBracketMatch.background": "#bbe67e99",
-      //   "editor.hoverHighlightBackground": "#3392ff2a",
-      //   "editor.selectionBackground": "#3392FF44",
       "sideBar.border": "#3c383680",
       "activityBar.border": "#3c383680",
       "editorGroupHeader.tabsBorder": "#3c383680"
-      // "activityBar.border": "#1d2021",
-      //! -----------------------
-      // "editorBracketHighlight.foreground1": "#ebdbb2",
-      // "editorBracketHighlight.foreground2": "#689d6a",
-      // "editorBracketHighlight.foreground3": "#458588",
-      // "editorBracketHighlight.foreground4": "#b16286",
-      // "editorBracketHighlight.foreground5": "#fe8019",
-      // "editorBracketHighlight.foreground6": "#fabd2f",
-      // ! ------------------------
     },
     "[Learn with Sumit - Shades of Grey]": {
       "editor.wordHighlightBackground": "#17E5E630",
@@ -100,23 +109,30 @@
       "editor.background": "#1f2428",
       "activityBar.background": "#1f2428",
       "titleBar.activeBackground": "#1f2428",
-      // "sideBar.border": "#5f616750",
       "activityBar.border": "#1f2428",
       "panel.border": "#5f616750",
       "editorCursor.foreground": "#00E8C6"
     },
     "[Learn with Sumit - Party]": {
-      // "editor.wordHighlightBackground": "#17E5E630",
       "editor.wordHighlightBorder": "#30dcdc",
       "editor.wordHighlightStrongBorder": "#d47d13",
       "editorLineNumber.activeForeground": "#30dcdc"
-    }
+    },
+    "editor.lineHighlightBackground": "#1073cf2d",
+    "editor.lineHighlightBorder": "#9fced11f"
   },
 
   "editor.tokenColorCustomizations": {
-    // "comments": "#d4922f",
     "textMateRules": [
       {
+        "name": "NORMAL",
+        "scope": ["entity.name.type.class"],
+        "settings": {
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "ITALIC",
         "scope": [
           // all comment types
           "comment",
@@ -124,18 +140,11 @@
           // true, false, null
           "constant.language",
 
-          // import, from, export, default, return, if, for, break, continue, try, catch, finally,
-          // throw, default, yield, await
-          "keyword.control",
-
           // in, void, delete, instanceof
           "keyword.operator.expression",
 
           // debugger
-          "keyword.other",
-
-          // new
-          "keyword.operator.new",
+          // "keyword.other",
 
           // super, this, arguments
           "variable.language",
@@ -148,30 +157,45 @@
           // no explicit scopes for constructor, const, let, var
           // also no explicit scope for function without the arrow
           // therefore we enable all storage and explictly exclude the arrow in another scope
-          "storage"
+          // "storage",
+          "storage.type",
 
           //  no explicit scope for the eval keyword yet
           //  can be targeted with the scope below, but scope is too broad
-          // "support.function",
+          "support.function",
 
           //  no explicit scope for the package keyword yet
           //  can be targeted with the scope below, but scope is too broad
-          // "variable.other.readwrite",
+          "variable.other.readwrite"
         ],
         "settings": {
           "fontStyle": "italic"
         }
       },
       {
+        "name": "BOLD ITALIC",
         "scope": [
-          // function keyword does not have an explicit scope without the arrow
-          // therefore we explictly exclude the function arrow from being italicized
-          "storage.type.function.arrow",
-          "text.html entity.name.tag",
-          "text.html punctuation.tag"
+          "variable.parameter.js",
+          "storage.modifier.async.js",
+
+          // import, from, export, default, return, if, for, break, continue, try, catch, finally,
+          // throw, default, yield, await
+          "keyword.control"
         ],
         "settings": {
-          "fontStyle": ""
+          "fontStyle": "italic bold"
+        }
+      },
+      {
+        "name": "BOLD",
+        "scope": [
+          "keyword.other.definition.ini",
+
+          // new
+          "keyword.operator.new"
+        ],
+        "settings": {
+          "fontStyle": "bold"
         }
       }
     ]
@@ -191,5 +215,18 @@
   "editor.quickSuggestions": {
     "strings": true
   },
-  "workbench.colorTheme": "Learn with Sumit - Shades of Grey"
+  "explorer.compactFolders": false,
+  "editor.mouseWheelZoom": true,
+  "workbench.sideBar.location": "left",
+  "tailwind-fold.foldStyle": "QUOTES",
+  "tailwind-fold.autoFold": false,
+  "console-ninja.featureSet": "Community",
+  "terminal.integrated.env.windows": {},
+  "editor.tabSize": 2,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "window.customTitleBarVisibility": "windowed",
+  "editor.renderWhitespace": "boundary",
+  "workbench.colorTheme": "Catppuccin Mocha",
+  "git.autofetch": true,
+  "cSpell.userWords": ["tseslint"]
 }
